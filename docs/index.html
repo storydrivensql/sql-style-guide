@@ -70,9 +70,15 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/000-introduction">Introduction: Why?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/001-general-guidelines">General guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-consistent">Be consistent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-explicit">Be explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#ease-of-editing-is-important">Ease of editing is important</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/002-indentation">Indentation and spacing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#keyword-alignment">Keyword alignment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/examples/examples-index">Examples</a><ul>
@@ -146,9 +152,15 @@
 <h1>Story Driven SQL Style Guide<a class="headerlink" href="#story-driven-sql-style-guide" title="Permalink to this headline">¶</a></h1>
 <p>Check out this page on Github: <a class="reference external" href="https://github.com/storydrivensql/sql-style-guide">storydrivensql/sql-style-guide</a></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/000-introduction">Introduction: Why?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/001-general-guidelines">General guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-consistent">Be consistent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-explicit">Be explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#ease-of-editing-is-important">Ease of editing is important</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/002-indentation">Indentation and spacing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#keyword-alignment">Keyword alignment</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/examples/examples-index">Examples</a><ul>
@@ -158,6 +170,10 @@
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources">Resources and other guides</a></li>
 </ul>
 <div class="toctree-wrapper compound">
+<span id="document-content/000-introduction"></span><div class="section" id="introduction-why">
+<h2>Introduction: Why?<a class="headerlink" href="#introduction-why" title="Permalink to this headline">¶</a></h2>
+<p>SQL has surprisingly few style guides or discussion on style, given how verbose the syntax can be, and how lenient is by convention, especially with whitespace. There are a few good guides, as mentioned in <a class="reference internal" href="index.html#document-content/resources"><span class="doc">Resources and other guides</span></a>, from which this guide takes inspiration, and makes notable differences.</p>
+</div>
 <span id="document-content/001-general-guidelines"></span><div class="section" id="general-guidelines">
 <h2>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="be-consistent">
@@ -176,6 +192,51 @@
 <p>Bad:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">surname</span> <span class="n">last_name</span>
 <span class="k">FROM</span> <span class="n">copy_of_payroll</span> <span class="n">employees</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ease-of-editing-is-important">
+<h3>Ease of editing is important<a class="headerlink" href="#ease-of-editing-is-important" title="Permalink to this headline">¶</a></h3>
+<p>Use leading commas.</p>
+<p>Put statement-ending semicolon on its own line.</p>
+</div>
+</div>
+<span id="document-content/002-indentation"></span><div class="section" id="indentation-and-spacing">
+<h2>Indentation and spacing<a class="headerlink" href="#indentation-and-spacing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="keyword-alignment">
+<h3>Keyword alignment<a class="headerlink" href="#keyword-alignment" title="Permalink to this headline">¶</a></h3>
+<p>Main clauses, such as <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, should be at the beginning of their respective lines and left-aligned.</p>
+<p>Arguments should (usually) be on their own line, indented from their respective clauses.</p>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">id</span>
+    <span class="p">,</span> <span class="n">name</span>
+<span class="k">FROM</span>
+    <span class="n">people</span>
+<span class="k">WHERE</span>
+    <span class="n">name</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">name</span> <span class="k">ASC</span>
+<span class="k">LIMIT</span> <span class="mi">10</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span>
+<span class="k">FROM</span> <span class="n">people</span>
+<span class="k">WHERE</span> <span class="n">name</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">ASC</span>
+<span class="k">LIMIT</span> <span class="mi">10</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Bad (IMHO): right-aligning keywords with the river, as suggested by <a class="reference external" href="https://sqlstyle.guide">sqlstyle.guide</a></p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span> <span class="n">name</span>
+  <span class="k">FROM</span> <span class="n">people</span>
+ <span class="k">WHERE</span> <span class="n">name</span> <span class="k">IS</span> <span class="k">NOT</span> <span class="k">NULL</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">name</span> <span class="k">ASC</span>
+ <span class="k">LIMIT</span> <span class="mi">10</span>
+<span class="p">;</span>
 </pre></div>
 </div>
 </div>

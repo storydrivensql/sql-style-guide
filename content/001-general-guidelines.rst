@@ -31,3 +31,11 @@ Bad:
      SELECT surname last_name
      FROM copy_of_payroll employees;
 
+
+
+Ease of editing is important
+============================
+
+Use leading commas.
+
+Put statement-ending semicolon on its own line.

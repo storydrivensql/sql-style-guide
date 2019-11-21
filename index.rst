@@ -11,7 +11,9 @@ Check out this page on Github: `storydrivensql/sql-style-guide <https://github.c
 .. toctree::
    :maxdepth: 5
 
+   /content/000-introduction
    /content/001-general-guidelines
+   /content/002-indentation
    /content/examples/examples-index
    /content/resources.rst
 
