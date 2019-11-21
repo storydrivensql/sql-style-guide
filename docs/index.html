@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SQLStyleGuide Notes 0.0.1beta documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://storydrivensql.github.io/sql-style-guideindex.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: white" >
+          
+
+          
+            <a href="index.html#document-index" class="icon icon-home"> SQLStyleGuide Notes
+          
+
+          
+          </a>
+
+          
+
+          
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/001-general-guidelines">General guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#be-consistent">Be consistent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#be-explicit">Be explicit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources">Resources and other guides</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html#document-index">SQLStyleGuide Notes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html#document-index">Docs</a> &raquo;</li>
+        
+      <li>SQLStyleGuide Notes 0.0.1beta documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="story-driven-sql-style-guide">
+<h1>Story Driven SQL Style Guide<a class="headerlink" href="#story-driven-sql-style-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<span id="document-content/001-general-guidelines"></span><div class="section" id="general-guidelines">
+<h2>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="be-consistent">
+<h3>Be consistent<a class="headerlink" href="#be-consistent" title="Permalink to this headline">¶</a></h3>
+<p>Always capitalize reserved keywords, such as <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>.</p>
+</div>
+<div class="section" id="be-explicit">
+<h3>Be explicit<a class="headerlink" href="#be-explicit" title="Permalink to this headline">¶</a></h3>
+<p>When humanly feasible, write out only the fields you need to include in a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> query, rather than <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span></code>.</p>
+<p>Explicitly write optional syntax, such as <code class="docutils literal notranslate"><span class="pre">AS</span></code>:</p>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">surname</span> <span class="k">AS</span> <span class="n">last_name</span>
+<span class="k">FROM</span> <span class="n">copy_of_payroll</span> <span class="k">AS</span> <span class="n">employees</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">surname</span> <span class="n">last_name</span>
+<span class="k">FROM</span> <span class="n">copy_of_payroll</span> <span class="n">employees</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-content/resources"></span><div class="section" id="resources-and-other-guides">
+<h2>Resources and other guides<a class="headerlink" href="#resources-and-other-guides" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://about.gitlab.com/handbook/business-ops/data-team/sql-style-guide/">Gitlab’s SQL Style Guide</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/fredbenenson/7bb92718e19138c20591">Kickstarter’s SQL Style Guide, via Fred Benenson</a></p></li>
+<li><p><a class="reference external" href="https://docs.telemetry.mozilla.org/concepts/sql_style.html">Firefox Data Documentation SQL Style Guide</a></p></li>
+<li><p><a class="reference external" href="https://www.sqlstyle.guide/">Simon Holywell’s SQL Style Guide</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Dan Nguyen
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
