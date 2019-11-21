@@ -16,6 +16,12 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# http://fnch.users.sourceforge.net/sphinxindexinsinglehtml.html
+import sys, os
+sys.path.insert(0, os.path.abspath('./extensions'))
+
+
+
 
 # -- Project information -----------------------------------------------------
 
@@ -41,6 +47,7 @@ release = '0.0.1beta'
 extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.autosectionlabel',
+    'globalindex',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
