@@ -7,6 +7,14 @@ Be consistent
 
 Always capitalize reserved keywords, such as ``SELECT`` and ``WHERE``.
 
+Follow PostgreSQL's strictness
+==============================
+
+A common workflow is to start in SQLite and then move to PostgreSQL, a more full-featured but equally free and well-loved database. SQLite is fairly lax and lenient in what it accepts, PostgreSQL isn't. For this guide, I'll almost always recommend following PostgreSQL's more strict conventions:
+
+https://wiki.postgresql.org/wiki/PostgreSQL_vs_SQL_Standard
+
+
 
 Be explicit
 ===========

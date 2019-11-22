@@ -1,6 +1,6 @@
-***********************
-Indentation and spacing
-***********************
+***********************************
+Indentation, spacing, and alignment
+***********************************
 
 
 Keyword alignment
