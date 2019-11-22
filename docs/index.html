@@ -70,7 +70,6 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/000-introduction">Introduction: Why?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/001-general-guidelines">General guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-consistent">Be consistent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#follow-postgresql-s-strictness">Follow PostgreSQL’s strictness</a></li>
@@ -99,6 +98,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/007-explicitness/index">Explicitness is goodliness</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/select-only">Select only what you need, don’t be an all star</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#arrange-the-columns-exactly-as-you-want-to-see-them">Arrange the columns exactly as you want to see them</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/join-syntax">Join syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#inner-join-not-just-join"><code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> not just  <code class="docutils literal notranslate"><span class="pre">JOIN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/group-by-columns">When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/010-consistency/index-consistency">Consistency</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#document-content/010-consistency/quoting">Quoting stuff</a></li>
 </ul>
@@ -114,11 +125,41 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/255-compound-queries/index">Compound and nested queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/888-by-keyword/index">Tips by clause/keyword</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/888-by-keyword/select"><code class="docutils literal notranslate"><span class="pre">SELECT</span></code> syntax tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#don-t-use-select">Don’t use <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#one-column-name-per-line">One column name per line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated">When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/examples/examples-index">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#document-content/examples/big-example">A big example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources">Resources and other guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources/index">Resources and other guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/resources/other-sql-styleguides">Other SQL Styleguides, and how they comare to mine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#julia-evans-sql-zines">Julia Evans sql-zines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#kickstarter-s-sql-style-guide-via-fred-benenson">Kickstarter’s SQL Style Guide via Fred Benenson</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#what-i-liked-and-borrowed">What I liked and borrowed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#what-i-disagreed-with">What I disagreed with</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#simon-holywell-s-sql-style-guide">Simon Holywell’s SQL Style Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="index.html#id1">What I liked and borrowed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#id2">What I disagreed with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#related-links-for-hollwell-s-sqlstyle-guide">Related links for Hollwell’s sqlstyle.guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#firefox-data-documentation-sql-style-guide">Firefox Data Documentation SQL Style Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#gitlab-s-sql-style-guide">Gitlab’s SQL Style Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/resources/other-styleguides">Styleguides for other languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other-stuff">Other stuff</a></li>
+</ul>
+</li>
 </ul>
 </div>
             
@@ -184,8 +225,12 @@
   <div class="section" id="story-driven-sql-style-guide">
 <h1>Story Driven SQL Style Guide<a class="headerlink" href="#story-driven-sql-style-guide" title="Permalink to this headline">¶</a></h1>
 <p>Check out this page on Github: <a class="reference external" href="https://github.com/storydrivensql/sql-style-guide">storydrivensql/sql-style-guide</a></p>
+<div class="section" id="why-another-style-guide">
+<h2>Why another style guide?<a class="headerlink" href="#why-another-style-guide" title="Permalink to this headline">¶</a></h2>
+<p>SQL has surprisingly few style guides or discussion on style, given how verbose the syntax can be, and how lenient is by convention, especially with whitespace. There are a few good guides, as mentioned in <a class="reference internal" href="index.html#document-content/resources/index"><span class="doc">Resources and other guides</span></a>, from which this guide takes inspiration, and makes notable differences.</p>
+<p>I’m also writing my own comprehensive SQL tutorial/reference book, tentatively titled <a class="reference external" href="https://github.com/storydrivensql/">Story Driven SQL</a>, somewhat in the style of <a class="reference external" href="http://ruby.bastardsbook.com/">The Bastards Book of Ruby</a>, but good, and informed by my <a class="reference external" href="http://www.padjo.org/">few years of teaching SQL to Stanford students as a visiting journalism professor</a>.</p>
+<p>I have no publish date in sight but I do have empty Github repos/orgs created. This style guide is meant to be a chapter in that book.</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/000-introduction">Introduction: Why?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/001-general-guidelines">General guidelines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#be-consistent">Be consistent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#follow-postgresql-s-strictness">Follow PostgreSQL’s strictness</a></li>
@@ -214,6 +259,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/007-explicitness/index">Explicitness is goodliness</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/select-only">Select only what you need, don’t be an all star</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#arrange-the-columns-exactly-as-you-want-to-see-them">Arrange the columns exactly as you want to see them</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/join-syntax">Join syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#inner-join-not-just-join"><code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> not just  <code class="docutils literal notranslate"><span class="pre">JOIN</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/007-explicitness/group-by-columns">When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/010-consistency/index-consistency">Consistency</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#document-content/010-consistency/quoting">Quoting stuff</a></li>
 </ul>
@@ -229,30 +286,50 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/255-compound-queries/index">Compound and nested queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/888-by-keyword/index">Tips by clause/keyword</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/888-by-keyword/select"><code class="docutils literal notranslate"><span class="pre">SELECT</span></code> syntax tips</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#don-t-use-select">Don’t use <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#one-column-name-per-line">One column name per line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated">When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#document-content/examples/examples-index">Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#document-content/examples/big-example">A big example</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources">Resources and other guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-content/resources/index">Resources and other guides</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/resources/other-sql-styleguides">Other SQL Styleguides, and how they comare to mine</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#julia-evans-sql-zines">Julia Evans sql-zines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#kickstarter-s-sql-style-guide-via-fred-benenson">Kickstarter’s SQL Style Guide via Fred Benenson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#simon-holywell-s-sql-style-guide">Simon Holywell’s SQL Style Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#firefox-data-documentation-sql-style-guide">Firefox Data Documentation SQL Style Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#gitlab-s-sql-style-guide">Gitlab’s SQL Style Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#document-content/resources/other-styleguides">Styleguides for other languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#other-stuff">Other stuff</a></li>
+</ul>
+</li>
 </ul>
 <div class="toctree-wrapper compound">
-<span id="document-content/000-introduction"></span><div class="section" id="introduction-why">
-<h2>Introduction: Why?<a class="headerlink" href="#introduction-why" title="Permalink to this headline">¶</a></h2>
-<p>SQL has surprisingly few style guides or discussion on style, given how verbose the syntax can be, and how lenient is by convention, especially with whitespace. There are a few good guides, as mentioned in <a class="reference internal" href="index.html#document-content/resources"><span class="doc">Resources and other guides</span></a>, from which this guide takes inspiration, and makes notable differences.</p>
-</div>
 <span id="document-content/001-general-guidelines"></span><div class="section" id="general-guidelines">
-<h2>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h2>
+<h3>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h3>
+<p>blah blah Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
 <div class="section" id="be-consistent">
-<h3>Be consistent<a class="headerlink" href="#be-consistent" title="Permalink to this headline">¶</a></h3>
+<h4>Be consistent<a class="headerlink" href="#be-consistent" title="Permalink to this headline">¶</a></h4>
 <p>Always capitalize reserved keywords, such as <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>.</p>
 </div>
 <div class="section" id="follow-postgresql-s-strictness">
-<h3>Follow PostgreSQL’s strictness<a class="headerlink" href="#follow-postgresql-s-strictness" title="Permalink to this headline">¶</a></h3>
+<h4>Follow PostgreSQL’s strictness<a class="headerlink" href="#follow-postgresql-s-strictness" title="Permalink to this headline">¶</a></h4>
 <p>A common workflow is to start in SQLite and then move to PostgreSQL, a more full-featured but equally free and well-loved database. SQLite is fairly lax and lenient in what it accepts, PostgreSQL isn’t. For this guide, I’ll almost always recommend following PostgreSQL’s more strict conventions:</p>
 <p><a class="reference external" href="https://wiki.postgresql.org/wiki/PostgreSQL_vs_SQL_Standard">https://wiki.postgresql.org/wiki/PostgreSQL_vs_SQL_Standard</a></p>
 </div>
 <div class="section" id="be-explicit">
-<h3>Be explicit<a class="headerlink" href="#be-explicit" title="Permalink to this headline">¶</a></h3>
+<h4>Be explicit<a class="headerlink" href="#be-explicit" title="Permalink to this headline">¶</a></h4>
 <p>When humanly feasible, write out only the fields you need to include in a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> query, rather than <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span></code>.</p>
 <p>Explicitly write optional syntax, such as <code class="docutils literal notranslate"><span class="pre">AS</span></code>:</p>
 <p>Good:</p>
@@ -267,16 +344,16 @@
 </div>
 </div>
 <div class="section" id="ease-of-editing-is-important">
-<h3>Ease of editing is important<a class="headerlink" href="#ease-of-editing-is-important" title="Permalink to this headline">¶</a></h3>
+<h4>Ease of editing is important<a class="headerlink" href="#ease-of-editing-is-important" title="Permalink to this headline">¶</a></h4>
 <p>Use leading commas.</p>
 <p>Put statement-ending semicolon on its own line.</p>
 </div>
 </div>
 <span id="document-content/002-alignment/index-alignment"></span><div class="toctree-wrapper compound">
 <span id="document-content/002-alignment/indentation"></span><div class="section" id="indentation-spacing-and-alignment">
-<h2>Indentation, spacing, and alignment<a class="headerlink" href="#indentation-spacing-and-alignment" title="Permalink to this headline">¶</a></h2>
+<h3>Indentation, spacing, and alignment<a class="headerlink" href="#indentation-spacing-and-alignment" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="keyword-alignment">
-<h3>Keyword alignment<a class="headerlink" href="#keyword-alignment" title="Permalink to this headline">¶</a></h3>
+<h4>Keyword alignment<a class="headerlink" href="#keyword-alignment" title="Permalink to this headline">¶</a></h4>
 <p>Main clauses, such as <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> and <code class="docutils literal notranslate"><span class="pre">WHERE</span></code>, should be at the beginning of their respective lines and left-aligned.</p>
 <p>Arguments should (usually) be on their own line, indented from their respective clauses.</p>
 <p>Good:</p>
@@ -314,7 +391,7 @@
 </div>
 </div>
 <span id="document-content/002-alignment/bracketing"></span><div class="section" id="bracketing-and-continuation">
-<h2>Bracketing and continuation<a class="headerlink" href="#bracketing-and-continuation" title="Permalink to this headline">¶</a></h2>
+<h3>Bracketing and continuation<a class="headerlink" href="#bracketing-and-continuation" title="Permalink to this headline">¶</a></h3>
 <p>Borrowing from Python’s PEP 8 Style Guide, specifically the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">Code Layout section</a></p>
 <blockquote>
 <div><p>Continuation lines should align wrapped elements either vertically using Python’s implicit line joining inside parentheses, brackets and braces, or using a hanging indent [7]. When using a hanging indent the following should be considered; there should be no arguments on the first line and further indentation should be used to clearly distinguish itself as a continuation line.</p>
@@ -379,7 +456,7 @@
 <p>(Not sold on the leading comma for the <code class="docutils literal notranslate"><span class="pre">SUBSTR()</span></code> arguments, e.g. <code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">4,</span> <span class="pre">7</span></code>)</p>
 </div>
 <span id="document-content/002-alignment/leading-commas"></span><div class="section" id="leading-commas">
-<h2>Leading commas<a class="headerlink" href="#leading-commas" title="Permalink to this headline">¶</a></h2>
+<h3>Leading commas<a class="headerlink" href="#leading-commas" title="Permalink to this headline">¶</a></h3>
 <p>This is likely this book’s most controversial style opinion.</p>
 <p>Given a statement with a list of columns like this:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span>
@@ -402,9 +479,9 @@
 </div>
 <p>Instead of placing commas between terms, as we do in normal English (and many programming languages), I advocate to put the commas <em>before</em></p>
 <div class="section" id="benefits-of-leading-commas">
-<h3>Benefits of leading commas<a class="headerlink" href="#benefits-of-leading-commas" title="Permalink to this headline">¶</a></h3>
+<h4>Benefits of leading commas<a class="headerlink" href="#benefits-of-leading-commas" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="listing-columns-is-easy">
-<h4>Listing columns is easy<a class="headerlink" href="#listing-columns-is-easy" title="Permalink to this headline">¶</a></h4>
+<h5>Listing columns is easy<a class="headerlink" href="#listing-columns-is-easy" title="Permalink to this headline">¶</a></h5>
 <p>Early on in this guide, I argued that you should avoid selecting columns you don’t need. Of course, the main reason why we over-select is because this:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
 <span class="k">FROM</span> <span class="k">data</span><span class="p">;</span>
@@ -449,7 +526,7 @@
 </div>
 </div>
 <div class="section" id="easy-rearrangement-and-aliasing">
-<h4>Easy rearrangement and aliasing<a class="headerlink" href="#easy-rearrangement-and-aliasing" title="Permalink to this headline">¶</a></h4>
+<h5>Easy rearrangement and aliasing<a class="headerlink" href="#easy-rearrangement-and-aliasing" title="Permalink to this headline">¶</a></h5>
 <p>Given this:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
   <span class="n">firstname</span><span class="p">,</span>
@@ -492,7 +569,7 @@
 </div>
 </div>
 <div class="section" id="error-detection">
-<h4>Error detection<a class="headerlink" href="#error-detection" title="Permalink to this headline">¶</a></h4>
+<h5>Error detection<a class="headerlink" href="#error-detection" title="Permalink to this headline">¶</a></h5>
 <p>As I’ve said before, we spend more time reading code than writing it. And often times, we’re reading code in order to debug it.</p>
 <p>Try to find the syntax error(s) in this SQL statement that uses the standard style of commas:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
@@ -550,7 +627,7 @@
 </div>
 </div>
 <div class="section" id="how-leading-commas-force-consistency">
-<h4>How leading commas force consistency<a class="headerlink" href="#how-leading-commas-force-consistency" title="Permalink to this headline">¶</a></h4>
+<h5>How leading commas force consistency<a class="headerlink" href="#how-leading-commas-force-consistency" title="Permalink to this headline">¶</a></h5>
 <p>Each leading comma denotes exactly one argument per line:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
   <span class="n">id</span>
@@ -593,7 +670,7 @@
 </div>
 </div>
 <div class="section" id="cleaning-up-compound-expressions">
-<h4>Cleaning up compound expressions<a class="headerlink" href="#cleaning-up-compound-expressions" title="Permalink to this headline">¶</a></h4>
+<h5>Cleaning up compound expressions<a class="headerlink" href="#cleaning-up-compound-expressions" title="Permalink to this headline">¶</a></h5>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
     <span class="n">id</span>
     <span class="p">,</span> <span class="nb">date</span>
@@ -618,20 +695,153 @@
 </div>
 </div>
 <div class="section" id="disadvantages-of-leading-commas">
-<h3>Disadvantages of leading commas<a class="headerlink" href="#disadvantages-of-leading-commas" title="Permalink to this headline">¶</a></h3>
+<h4>Disadvantages of leading commas<a class="headerlink" href="#disadvantages-of-leading-commas" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="not-what-we-re-accustomed-to-in-normal-english">
-<h4>Not what we’re accustomed to in normal English<a class="headerlink" href="#not-what-we-re-accustomed-to-in-normal-english" title="Permalink to this headline">¶</a></h4>
+<h5>Not what we’re accustomed to in normal English<a class="headerlink" href="#not-what-we-re-accustomed-to-in-normal-english" title="Permalink to this headline">¶</a></h5>
 </div>
 <div class="section" id="most-people-don-t-do-them">
-<h4>Most people don’t do them<a class="headerlink" href="#most-people-don-t-do-them" title="Permalink to this headline">¶</a></h4>
+<h5>Most people don’t do them<a class="headerlink" href="#most-people-don-t-do-them" title="Permalink to this headline">¶</a></h5>
 <p>Great research by Felipe Hoffa:</p>
 <p><a class="reference external" href="https://towardsdatascience.com/winning-arguments-with-data-leading-with-commas-in-sql-672b3b81eac9">Leading with commas — ugly or efficient? An investigation over 320 GB of SQL code</a></p>
 </div>
 </div>
 </div>
 </div>
+<span id="document-content/007-explicitness/index"></span><div class="section" id="explicitness-is-goodliness">
+<h3>Explicitness is goodliness<a class="headerlink" href="#explicitness-is-goodliness" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<span id="document-content/007-explicitness/select-only"></span><div class="section" id="select-only-what-you-need-don-t-be-an-all-star">
+<h4>Select only what you need, don’t be an all star<a class="headerlink" href="#select-only-what-you-need-don-t-be-an-all-star" title="Permalink to this headline">¶</a></h4>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">legislator</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span>
+<span class="k">FROM</span> <span class="n">legislator</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="arrange-the-columns-exactly-as-you-want-to-see-them">
+<h5>Arrange the columns exactly as you want to see them<a class="headerlink" href="#arrange-the-columns-exactly-as-you-want-to-see-them" title="Permalink to this headline">¶</a></h5>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">party</span>
+    <span class="p">,</span> <span class="k">state</span>
+<span class="k">FROM</span> <span class="n">legislator</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">party</span> <span class="k">ASC</span>
+    <span class="p">,</span> <span class="k">state</span> <span class="k">ASC</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Bad: the following arrangement makes it harder to see the party breakdown TKTK</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="k">state</span>
+    <span class="p">,</span> <span class="n">party</span>
+<span class="k">FROM</span> <span class="n">legislator</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">party</span> <span class="k">ASC</span>
+    <span class="p">,</span> <span class="k">state</span> <span class="k">ASC</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-content/007-explicitness/join-syntax"></span><div class="section" id="join-syntax">
+<h4>Join syntax<a class="headerlink" href="#join-syntax" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="inner-join-not-just-join">
+<h5><code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> not just  <code class="docutils literal notranslate"><span class="pre">JOIN</span></code><a class="headerlink" href="#inner-join-not-just-join" title="Permalink to this headline">¶</a></h5>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> keyword represents an <strong>inner join</strong>. Thus, the two following queries are equivalent:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">JOIN</span> <span class="n">school</span>
+    <span class="k">ON</span> <span class="n">student</span><span class="p">.</span><span class="n">school_id</span> <span class="o">=</span> <span class="n">school</span><span class="p">.</span><span class="n">id</span>
+<span class="p">;</span>
+
+
+<span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">school</span>
+    <span class="k">ON</span> <span class="n">student</span><span class="p">.</span><span class="n">school_id</span> <span class="o">=</span> <span class="n">school</span><span class="p">.</span><span class="n">id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>So why write out <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code>? For queries that involve multiple types of joins, such as <code class="docutils literal notranslate"><span class="pre">LEFT</span> <span class="pre">JOIN</span></code>, the long version of <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> visually aligns better than does just <code class="docutils literal notranslate"><span class="pre">JOIN</span></code>:</p>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">INNER</span> <span class="k">JOIN</span> <span class="n">school</span>
+    <span class="k">ON</span> <span class="n">student</span><span class="p">.</span><span class="n">school_id</span> <span class="o">=</span> <span class="n">school</span><span class="p">.</span><span class="n">id</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">county</span>
+    <span class="k">ON</span> <span class="n">school</span><span class="p">.</span><span class="n">county_id</span> <span class="o">=</span> <span class="n">county</span><span class="p">.</span><span class="n">id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">JOIN</span> <span class="n">school</span>
+    <span class="k">ON</span> <span class="n">student</span><span class="p">.</span><span class="n">school_id</span> <span class="o">=</span> <span class="n">school</span><span class="p">.</span><span class="n">id</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">county</span>
+    <span class="k">ON</span> <span class="n">school</span><span class="p">.</span><span class="n">county_id</span> <span class="o">=</span> <span class="n">county</span><span class="p">.</span><span class="n">id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>More explanation via Kickstarter guide: <a class="reference external" href="https://gist.github.com/fredbenenson/7bb92718e19138c20591#join">https://gist.github.com/fredbenenson/7bb92718e19138c20591#join</a></p>
+</div>
+</div>
+<span id="document-content/007-explicitness/group-by-columns"></span><div class="section" id="when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated">
+<h4>When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated<a class="headerlink" href="#when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated" title="Permalink to this headline">¶</a></h4>
+<p>SQLite, lenient language that it is, will not throw an error on this:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="n">school_name</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">school_id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>However, a stricter language like PostgreSQL <em>will</em>. So get in the habit of not selecting columns that you aren’t grouping by — in this case, <code class="docutils literal notranslate"><span class="pre">school_name</span></code>:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">school_id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>But what if you need the school name, and you assume/believe that each school_id corresponds to exactly one school name? Then nothing wrong with grouping by both school_id and school_name:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="n">school_name</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+    <span class="n">school_id</span><span class="p">,</span> <span class="n">school_name</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>However, if you’re assumption is wrong, well, that reveals <em>another</em> nice upside of being explicit. You can immediately see in the results the inconsistency</p>
+<p>Even if you never plan on doing SQL outside of SQLite’s forgiving syntax, it’s important to avoid being sloppy, because you can get results that don’t throw an error, but also don’t make any real world sense:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">first_name</span>
+    <span class="p">,</span> <span class="n">party</span>
+    <span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">average_age</span>
+<span class="k">FROM</span> <span class="n">legislator</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>TKTK: The first_name field ends up signifying nothing at best, and being a major distraction at worst, especially if you end up publishing that data table.</p>
+</div>
+</div>
+</div>
 <span id="document-content/010-consistency/index-consistency"></span><div class="section" id="consistency">
-<h2>Consistency<a class="headerlink" href="#consistency" title="Permalink to this headline">¶</a></h2>
+<h3>Consistency<a class="headerlink" href="#consistency" title="Permalink to this headline">¶</a></h3>
 <p>Rules we care about:</p>
 <ul class="simple">
 <li><p>Follow conventions that enable — or even <em>compel</em> — consistency</p></li>
@@ -647,7 +857,7 @@
 <p>TKTK</p>
 <div class="toctree-wrapper compound">
 <span id="document-content/010-consistency/quoting"></span><div class="section" id="quoting-stuff">
-<h3>Quoting stuff<a class="headerlink" href="#quoting-stuff" title="Permalink to this headline">¶</a></h3>
+<h4>Quoting stuff<a class="headerlink" href="#quoting-stuff" title="Permalink to this headline">¶</a></h4>
 <p>(optional or no)</p>
 <p>SQLite is a flexible, friendly language, in that it will treat the following quoting conventions as equal, when it comes to a table named <code class="docutils literal notranslate"><span class="pre">person</span></code>:</p>
 <ul class="simple">
@@ -661,24 +871,24 @@
 </div>
 <span id="document-content/042-naming-conventions/index"></span><div class="toctree-wrapper compound">
 <span id="document-content/042-naming-conventions/table-names"></span><div class="section" id="table-names">
-<h2>Table names<a class="headerlink" href="#table-names" title="Permalink to this headline">¶</a></h2>
+<h3>Table names<a class="headerlink" href="#table-names" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="names-to-avoid">
-<h3>Names to avoid<a class="headerlink" href="#names-to-avoid" title="Permalink to this headline">¶</a></h3>
+<h4>Names to avoid<a class="headerlink" href="#names-to-avoid" title="Permalink to this headline">¶</a></h4>
 <p>Easiest to start with things not to do.</p>
 <div class="section" id="avoid-using-reserved-keywords">
-<h4>Avoid using reserved keywords<a class="headerlink" href="#avoid-using-reserved-keywords" title="Permalink to this headline">¶</a></h4>
+<h5>Avoid using reserved keywords<a class="headerlink" href="#avoid-using-reserved-keywords" title="Permalink to this headline">¶</a></h5>
 <p>e.g. user, table</p>
 </div>
 <div class="section" id="avoid-very-generic-keywords">
-<h4>Avoid very generic keywords<a class="headerlink" href="#avoid-very-generic-keywords" title="Permalink to this headline">¶</a></h4>
+<h5>Avoid very generic keywords<a class="headerlink" href="#avoid-very-generic-keywords" title="Permalink to this headline">¶</a></h5>
 </div>
 <div class="section" id="avoid-ordinals-and-numerical-labels">
-<h4>Avoid ordinals and numerical labels<a class="headerlink" href="#avoid-ordinals-and-numerical-labels" title="Permalink to this headline">¶</a></h4>
+<h5>Avoid ordinals and numerical labels<a class="headerlink" href="#avoid-ordinals-and-numerical-labels" title="Permalink to this headline">¶</a></h5>
 <p>e.g. if you have a table named <code class="docutils literal notranslate"><span class="pre">first_friend</span></code> and <code class="docutils literal notranslate"><span class="pre">second_friend</span></code>, is there a reason why you simply don’t have a single table, <code class="docutils literal notranslate"><span class="pre">friend</span></code>?</p>
 </div>
 </div>
 <div class="section" id="table-names-should-be-singular">
-<h3>Table names should be singular<a class="headerlink" href="#table-names-should-be-singular" title="Permalink to this headline">¶</a></h3>
+<h4>Table names should be singular<a class="headerlink" href="#table-names-should-be-singular" title="Permalink to this headline">¶</a></h4>
 <p>In most real world situations, you will be constrained by the language framework. For example, Rails by convention expects the <code class="docutils literal notranslate"><span class="pre">Person</span></code> and <code class="docutils literal notranslate"><span class="pre">Apple</span></code> data objects to have corresponding tables named in snakecase plural, e.g. <code class="docutils literal notranslate"><span class="pre">people</span></code> and <code class="docutils literal notranslate"><span class="pre">apples</span></code>.</p>
 <p>Great discussion here: <a class="reference external" href="https://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names">https://stackoverflow.com/questions/338156/table-naming-dilemma-singular-vs-plural-names</a></p>
 <p>However, when you have the choice to name things what you want, I recommend using <strong>singular</strong> over <strong>plural</strong> names, by a very slim margin of benefit. Mostly, <em>singular</em> is more <em>consistent</em>:</p>
@@ -708,17 +918,111 @@
 </div>
 </div>
 <span id="document-content/255-compound-queries/index"></span><div class="section" id="compound-and-nested-queries">
-<h2>Compound and nested queries<a class="headerlink" href="#compound-and-nested-queries" title="Permalink to this headline">¶</a></h2>
+<h3>Compound and nested queries<a class="headerlink" href="#compound-and-nested-queries" title="Permalink to this headline">¶</a></h3>
 <p>Zen of Python: <a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">https://www.python.org/dev/peps/pep-0020/</a></p>
 <blockquote>
 <div><p>Flat is better than nested</p>
 </div></blockquote>
 </div>
+<span id="document-content/888-by-keyword/index"></span><div class="section" id="tips-by-clause-keyword">
+<h3>Tips by clause/keyword<a class="headerlink" href="#tips-by-clause-keyword" title="Permalink to this headline">¶</a></h3>
+<p>If you prefer to see my style recommendations as they apply to specific clauses and keywords, this section remixes the previous content for your convenience</p>
+<div class="toctree-wrapper compound">
+<span id="document-content/888-by-keyword/select"></span><div class="section" id="select-syntax-tips">
+<h4><code class="docutils literal notranslate"><span class="pre">SELECT</span></code> syntax tips<a class="headerlink" href="#select-syntax-tips" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="don-t-use-select">
+<h5>Don’t use <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span></code><a class="headerlink" href="#don-t-use-select" title="Permalink to this headline">¶</a></h5>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+<span class="k">FROM</span> <span class="n">person</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">name</span>
+<span class="k">FROM</span> <span class="n">person</span>
+</pre></div>
+</div>
+<p>More: <a class="reference internal" href="index.html#document-content/007-explicitness/select-only"><span class="doc">Select only what you need, don’t be an all star</span></a></p>
+</div>
+<div class="section" id="one-column-name-per-line">
+<h5>One column name per line<a class="headerlink" href="#one-column-name-per-line" title="Permalink to this headline">¶</a></h5>
+<p>Bad:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">firstname</span><span class="p">,</span> <span class="n">middlename</span><span class="p">,</span> <span class="n">lastname</span>
+<span class="k">FROM</span> <span class="n">person</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Good:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">firstname</span>
+    <span class="p">,</span> <span class="n">middlename</span>
+    <span class="p">,</span> <span class="n">lastname</span>
+<span class="k">FROM</span> <span class="n">person</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>OK (assuming you don’t need <code class="docutils literal notranslate"><span class="pre">middlename</span></code>, obviously):</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span>
+<span class="k">FROM</span> <span class="n">person</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>More: <a class="reference internal" href="index.html#document-content/002-alignment/indentation"><span class="doc">Indentation, spacing, and alignment</span></a></p>
+</div>
+<div class="section" id="when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated">
+<h5>When doing <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code>, do not select columns that won’t be aggregated<a class="headerlink" href="#when-doing-group-by-do-not-select-columns-that-won-t-be-aggregated" title="Permalink to this headline">¶</a></h5>
+<p>SQLite, lenient language that it is, will not throw an error on this:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="n">school_name</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">school_id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>However, a stricter language like PostgreSQL <em>will</em>. So get in the habit of not selecting columns that you aren’t grouping by — in this case, <code class="docutils literal notranslate"><span class="pre">school_name</span></code>:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">school_id</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>But what if you need the school name, and you assume/believe that each school_id corresponds to exactly one school name? Then nothing wrong with grouping by both school_id and school_name:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">school_id</span>
+    <span class="p">,</span> <span class="n">school_name</span>
+    <span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">population</span>
+    <span class="p">,</span> <span class="k">MAX</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span> <span class="k">AS</span> <span class="n">oldest_grade</span>
+<span class="k">FROM</span> <span class="n">student</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+    <span class="n">school_id</span><span class="p">,</span> <span class="n">school_name</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>However, if you’re assumption is wrong, well, that reveals <em>another</em> nice upside of being explicit. You can immediately see in the results the inconsistency</p>
+<p>Even if you never plan on doing SQL outside of SQLite’s forgiving syntax, it’s important to avoid being sloppy, because you can get results that don’t throw an error, but also don’t make any real world sense:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+    <span class="n">first_name</span>
+    <span class="p">,</span> <span class="n">party</span>
+    <span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="k">AS</span> <span class="n">average_age</span>
+<span class="k">FROM</span> <span class="n">legislator</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+<p>TKTK: The first_name field ends up signifying nothing at best, and being a major distraction at worst, especially if you end up publishing that data table.</p>
+</div>
+</div>
+</div>
+</div>
 <span id="document-content/examples/examples-index"></span><div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <div class="toctree-wrapper compound">
 <span id="document-content/examples/big-example"></span><div class="section" id="a-big-example">
-<h3>A big example<a class="headerlink" href="#a-big-example" title="Permalink to this headline">¶</a></h3>
+<h4>A big example<a class="headerlink" href="#a-big-example" title="Permalink to this headline">¶</a></h4>
 <p>here’s a longform but not too complicated example:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">WITH</span> <span class="n">bills</span> <span class="k">AS</span> <span class="p">(</span>
     <span class="k">SELECT</span>
@@ -760,15 +1064,118 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
 </div>
 </div>
-<span id="document-content/resources"></span><div class="section" id="resources-and-other-guides">
-<h2>Resources and other guides<a class="headerlink" href="#resources-and-other-guides" title="Permalink to this headline">¶</a></h2>
+<span id="document-content/resources/index"></span><div class="section" id="resources-and-other-guides">
+<h3>Resources and other guides<a class="headerlink" href="#resources-and-other-guides" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<span id="document-content/resources/other-sql-styleguides"></span><div class="section" id="other-sql-styleguides-and-how-they-comare-to-mine">
+<h4>Other SQL Styleguides, and how they comare to mine<a class="headerlink" href="#other-sql-styleguides-and-how-they-comare-to-mine" title="Permalink to this headline">¶</a></h4>
+<p>I wrote this guide because there weren’t many comprehensive style guides or discussions when it came to SQL. That doesn’t mean there aren’t any. This section lists the ones I’ve liked and read and borrowed/stole from, as well as a summary of where they and I differ.</p>
+<div class="section" id="julia-evans-sql-zines">
+<h5>Julia Evans sql-zines<a class="headerlink" href="#julia-evans-sql-zines" title="Permalink to this headline">¶</a></h5>
+<p>Evans’s are less style guides and more syntax/concept lessons, but they’re so well-written and delightful that they inspired me to finish my own writings on SQL, which I had grown to see as a dreary burden. Evans’s work is the opposite of dreary and I wish I had her talent.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">The Zen of Python</a></p></li>
-<li><p><a class="reference external" href="https://about.gitlab.com/handbook/business-ops/data-team/sql-style-guide/">Gitlab’s SQL Style Guide</a></p></li>
-<li><p><a class="reference external" href="https://gist.github.com/fredbenenson/7bb92718e19138c20591">Kickstarter’s SQL Style Guide, via Fred Benenson</a></p></li>
-<li><p><a class="reference external" href="https://docs.telemetry.mozilla.org/concepts/sql_style.html">Firefox Data Documentation SQL Style Guide</a></p></li>
-<li><p><a class="reference external" href="https://www.sqlstyle.guide/">Simon Holywell’s SQL Style Guide</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/b0rk/status/1177642768484712449/photo/1">how joins work</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/b0rk/status/1182361078937862144">SQL exercises: GROUP BY</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/b0rk/status/1180117134808145920/photo/1">sometimes one query isn’t enough</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/b0rk/status/1195179166121054210/photo/1">A screenshot of the sql zine pages she produced so far</a></p></li>
 </ul>
+</div>
+<div class="section" id="kickstarter-s-sql-style-guide-via-fred-benenson">
+<h5>Kickstarter’s SQL Style Guide via Fred Benenson<a class="headerlink" href="#kickstarter-s-sql-style-guide-via-fred-benenson" title="Permalink to this headline">¶</a></h5>
+<dl class="simple">
+<dt>URL:</dt><dd><p><a class="reference external" href="https://gist.github.com/fredbenenson/7bb92718e19138c20591">https://gist.github.com/fredbenenson/7bb92718e19138c20591</a></p>
+</dd>
+<dt>Last revised:</dt><dd><p>2016-01-29</p>
+</dd>
+</dl>
+<p>This SQL style guide is a single Gist and is shared as a manual among Kickstarter’s data team.</p>
+<p>Concise, well-written, with a nice layout that’s easy on the eyes and easy to parse.  The SQL variant that Kickstarter uses is AWS Redshift and Postgres, but “much of it can be applied to any SQL database”.</p>
+<p>This guide is authored by <a class="reference external" href="http://fredbenenson.com/">Fred Benenson</a>, who has since moved on from Kickstarter. However, I could not find an updated, official manual, and <a class="reference external" href="https://kickstarter.engineering/our-sql-style-guide-8a1c24a6fe0f">Kickstarter’s engineering blog</a> links to Benenson’s gist.</p>
+<div class="section" id="what-i-liked-and-borrowed">
+<h6>What I liked and borrowed<a class="headerlink" href="#what-i-liked-and-borrowed" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>The affirmation of snakecase</p></li>
+<li><p>His explanation for being explicit with <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code>: <a class="reference external" href="https://gist.github.com/fredbenenson/7bb92718e19138c20591#join">https://gist.github.com/fredbenenson/7bb92718e19138c20591#join</a></p></li>
+<li><p>TK</p></li>
+</ul>
+</div>
+<div class="section" id="what-i-disagreed-with">
+<h6>What I disagreed with<a class="headerlink" href="#what-i-disagreed-with" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>His affirmation of trailing-comma style</p></li>
+<li><p>TK</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="simon-holywell-s-sql-style-guide">
+<h5>Simon Holywell’s SQL Style Guide<a class="headerlink" href="#simon-holywell-s-sql-style-guide" title="Permalink to this headline">¶</a></h5>
+<dl class="simple">
+<dt>URL:</dt><dd><p><a class="reference external" href="https://www.sqlstyle.guide/">https://www.sqlstyle.guide/</a></p>
+</dd>
+</dl>
+<p>Holywell’s styleguide not only has killer SEO, placing it at the top of Google results when searching for “sql styleguide”, but it is comprehensive and well-organized.</p>
+<div class="section" id="id1">
+<h6>What I liked and borrowed<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>His affirmation of snakecase</p></li>
+<li><p>His affirmation of ISO-8601</p></li>
+<li><p>An emphasis on the importance of good naming conventions</p></li>
+<li><p>The use of standard SQL functions instead of vendor-specific</p></li>
+<li><p>TK</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h6>What I disagreed with<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p>Right-aligning keywords with a river; I don’t know how to create and maintain that with a standard text editor (i.e. with default auto-indenting behavior). Also, it seems to break down when writing compound and nested queries.</p></li>
+<li><p>Not sure I agree with all the uniform suffixes, or if that needs to be covered in this kind of guide</p></li>
+<li><p>TK</p></li>
+</ul>
+</div>
+<div class="section" id="related-links-for-hollwell-s-sqlstyle-guide">
+<h6>Related links for Hollwell’s sqlstyle.guide<a class="headerlink" href="#related-links-for-hollwell-s-sqlstyle-guide" title="Permalink to this headline">¶</a></h6>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.simonholywell.com/post/2016/12/sql-style-guide-misconceptions/?utm_source=sqlstyle.guide-sqlstyle.guide&amp;utm_medium=link&amp;utm_campaign=footer-link">SQL style guide misconceptions</a>: a blog post Holywell wrote to address frequent complaints he’s seen about his guide.</p></li>
+<li><p><a class="reference external" href="https://news.ycombinator.com/item?id=12671667">Hacker News discussion on 2016-10-09</a></p></li>
+<li><p><a class="reference external" href="https://www.reddit.com/r/SQL/duplicates/3efmn0/sql_style_guide_a_consistent_code_guide_ensuring/">Various Reddit discussions</a></p></li>
+</ul>
+<p>Firefox Data Documentation SQL Style Guide</p>
+</div>
+</div>
+<div class="section" id="firefox-data-documentation-sql-style-guide">
+<h5>Firefox Data Documentation SQL Style Guide<a class="headerlink" href="#firefox-data-documentation-sql-style-guide" title="Permalink to this headline">¶</a></h5>
+<dl class="simple">
+<dt>URL:</dt><dd><p><a class="reference external" href="https://docs.telemetry.mozilla.org/concepts/sql_style.html">https://docs.telemetry.mozilla.org/concepts/sql_style.html</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="gitlab-s-sql-style-guide">
+<h5>Gitlab’s SQL Style Guide<a class="headerlink" href="#gitlab-s-sql-style-guide" title="Permalink to this headline">¶</a></h5>
+<dl class="simple">
+<dt>URL:</dt><dd><p><a class="reference external" href="https://about.gitlab.com/handbook/business-ops/data-team/sql-style-guide/">https://about.gitlab.com/handbook/business-ops/data-team/sql-style-guide/</a></p>
+</dd>
+</dl>
+</div>
+</div>
+<span id="document-content/resources/other-styleguides"></span><div class="section" id="styleguides-for-other-languages">
+<h4>Styleguides for other languages<a class="headerlink" href="#styleguides-for-other-languages" title="Permalink to this headline">¶</a></h4>
+<p>These guides aren’t SQL specific, but I include them because they are excellent guides overall, with universal principles and concepts that I’d like my SQL styleguide to embody.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/dev/peps/pep-0020/">PEP 20 – The Zen of Python</a>: Twenty great aphorisms that apply to any programming language, and to many things outside of programming.</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">`PEP 8 -- Style Guide for Python Code&lt;https://www.python.org/dev/peps/pep-0008/&gt;`_</span></a>: I think Python’s design and philosophy is one of the best in all contemporary languages, so unsurprisingly, I believe its styleguide to be very worth reading and stealing from.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="other-stuff">
+<h4>Other stuff<a class="headerlink" href="#other-stuff" title="Permalink to this headline">¶</a></h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
