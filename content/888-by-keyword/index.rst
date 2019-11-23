@@ -10,3 +10,4 @@ If you prefer to see my style recommendations as they apply to specific clauses 
    :maxdepth: 5
 
    /content/888-by-keyword/select
+   /content/888-by-keyword/where

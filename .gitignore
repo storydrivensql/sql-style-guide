@@ -16,7 +16,7 @@ apikeys/
 apikey*.*
 
 # Shouldn't be including compressed files
-*.zip
+# *.zip
 *.gz
 
 # spreadsheet/db intermediate files

@@ -65,6 +65,7 @@ What I liked and borrowed
 - His affirmation of ISO-8601
 - An emphasis on the importance of good naming conventions
 - The use of standard SQL functions instead of vendor-specific
+- The line-spacing principles https://www.sqlstyle.guide/#line-spacing
 - TK
 
 What I disagreed with
@@ -72,6 +73,8 @@ What I disagreed with
 
 - Right-aligning keywords with a river; I don't know how to create and maintain that with a standard text editor (i.e. with default auto-indenting behavior). Also, it seems to break down when writing compound and nested queries.
 - Not sure I agree with all the uniform suffixes, or if that needs to be covered in this kind of guide
+- Use of nested queries over CTEs
+- Should schema design be part of a style guide?
 - TK
 
 
@@ -98,3 +101,4 @@ URL:
 
 
 
+- `12 Common Mistakes and Missed Optimization Opportunities in SQL Made by Developers and Non-Developers <https://hakibenita.com/sql-dos-and-donts>`_: this is a great writeup that features not just style tips, but optimizations and anti-patterns to be aware of.

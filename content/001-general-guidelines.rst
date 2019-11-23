@@ -51,3 +51,24 @@ Ease of editing is important
 Use leading commas.
 
 Put statement-ending semicolon on its own line.
+
+
+
+Conciseness when possible
+=========================
+
+- Use IN and BETWEEN
+- Compact logical expressions
+
+
+But not too concise
+===================
+
+
+Bad:
+
+.. code-block:: sql
+
+    SELECT firstname first_name
+    FROM person adult
+    WHERE age > 19;

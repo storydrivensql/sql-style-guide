@@ -1,0 +1,14 @@
+census_name,wrangled_name
+GEO.id,geo_id
+GEO.id2,geo_short_id
+GEO.display-label,geo_name
+HD01_VD01,total_population
+HD01_VD02,non_hispanic
+HD01_VD03,white
+HD01_VD04,black
+HD01_VD05,ai_an
+HD01_VD06,asian
+HD01_VD07,pacific_islander
+HD02_VD08,other_race
+HD01_VD09,mixed_race
+HD01_VD12,hispanic
